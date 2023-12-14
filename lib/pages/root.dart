@@ -31,7 +31,7 @@ class _RootAppState extends State<RootApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appBgColor,
-      bottomNavigationBar: _buildBottomBar(),
+      // bottomNavigationBar: _buildBottomBar(),
       body: _buildBarPage(),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badge;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -27,9 +27,9 @@ class NotificationBox extends StatelessWidget {
   }
 
   _buildNofiedIcon() {
-    return Badge(
+    return badge.Badge(
       padding: EdgeInsets.all(3),
-      position: BadgePosition.topEnd(top: -7, end: 2),
+      position: badge.BadgePosition.topEnd(top: -7, end: 2),
       badgeContent: Text(
         '',
         style: TextStyle(color: Colors.white),

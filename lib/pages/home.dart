@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_app/theme/color.dart';
@@ -55,27 +56,31 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: Text(
-              "Hello Sangvaleap!",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+          FadeInDown(
+            child: Padding(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              child: Text(
+                "Hello Sangvaleap!",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+              ),
             ),
           ),
           const SizedBox(
             height: 10,
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: Text(
-              "Find Your Meals",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          FadeInDown(
+            child: Padding(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              child: Text(
+                "Find Your Meals",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          _buildSearch(),
+          FadeInLeft(child: _buildSearch()),
           const SizedBox(
             height: 25,
           ),
@@ -192,8 +197,11 @@ class _HomePageState extends State<HomePage> {
       child: Row(
         children: List.generate(
           populars.length,
-          (index) => PopularItem(
-            data: populars[index],
+          (index) => BounceInLeft(
+            duration: Duration(milliseconds: 700),
+            child: PopularItem(
+              data: populars[index],
+            ),
           ),
         ),
       ),
@@ -204,7 +212,7 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: List.generate(
         featured.length,
-        (index) => FeaturedItem(data: featured[index]),
+        (index) => FadeInDown(child: FeaturedItem(data: featured[index])),
       ),
     );
   }
