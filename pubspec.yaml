@@ -20,6 +20,7 @@ dependencies:
   flutter_svg_provider: ^1.0.3
   file: ^7.0.0
   animate_do: ^3.0.2
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:

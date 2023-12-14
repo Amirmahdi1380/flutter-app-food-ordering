@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
               child: Icon(
                 Icons.clear_all_rounded,
                 size: 28,
+                color: Colors.black,
               ),
             ),
           ),

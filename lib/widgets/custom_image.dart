@@ -39,7 +39,10 @@ class CustomImage extends StatelessWidget {
             offset: Offset(1, 2), // changes position of shadow
           ),
         ],
-        image: DecorationImage(image: NetworkImage(name), fit: BoxFit.cover),
+        image: DecorationImage(
+          image: NetworkImage(name),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

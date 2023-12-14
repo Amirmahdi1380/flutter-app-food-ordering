@@ -75,19 +75,28 @@ class _SignUpScreenState extends State<SignUpScreen>
                     ),
                     Column(
                       children: [
-                        Column(
-                          children: [
-                            const Text(
-                              'Craving Delicious Food?',
-                              style: TextStyle(
-                                fontFamily: 'Lx',
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
+                        FadeInDown(
+                          child: Column(
+                            children: [
+                              const Text(
+                                'Craving Delicious Food?',
+                                style: TextStyle(
+                                  fontFamily: 'Lx',
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                          ],
+                              const Text(
+                                '\We\'ll Bring It to You in No Time!',
+                                style: TextStyle(
+                                  fontFamily: 'Lx',
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        
                         BounceInLeft(
                           child: Padding(
                             padding: const EdgeInsets.only(top: 70),
@@ -125,24 +134,27 @@ class _SignUpScreenState extends State<SignUpScreen>
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 80),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'Already have an account? ',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400, fontSize: 16),
-                              ),
-                              Text(
-                                'Log in',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                        FadeIn(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 80),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  'Already have an account? ',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16),
                                 ),
-                              )
-                            ],
+                                Text(
+                                  'Log in',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         )
                       ],
