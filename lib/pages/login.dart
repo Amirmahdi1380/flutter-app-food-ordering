@@ -95,6 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           border: Border.all(
                               color: const Color(0xff2F2F2F).withOpacity(0.4))),
                       child: const TextField(
+                        obscureText: true,
+                        enableSuggestions: false,
+                        autocorrect: false,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           labelText: "Password",

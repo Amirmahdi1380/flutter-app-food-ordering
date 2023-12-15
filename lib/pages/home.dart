@@ -30,24 +30,36 @@ class _HomePageState extends State<HomePage> {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child: Container(
-              alignment: Alignment.centerLeft,
-              child: Icon(
-                Icons.clear_all_rounded,
-                size: 28,
-                color: Colors.black,
+      leading: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: Icon(
+          Icons.menu,
+          color: primary,
+        ),
+      ),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                width: 0.1,
+                color: primary.withOpacity(0.6),
               ),
             ),
+            child: Icon(
+              Icons.person_rounded,
+              color: primary,
+              size: 27,
+            ),
           ),
-          NotificationBox(
-            number: 1,
-          )
-        ],
+        )
+      ],
+      title: Text(
+        'Food delivery',
+        style: TextStyle(
+            fontSize: 15, fontWeight: FontWeight.w600, color: Colors.black),
       ),
     );
   }
